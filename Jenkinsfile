@@ -14,6 +14,8 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
+                sh 'pwd'
+                sh 'docker ps'
                 sh 'docker build -t thanabodee2661/demo-server:latest .'
             }
         }
