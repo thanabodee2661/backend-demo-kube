@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'openjdk:17-jdk-slim-buster'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
     stages {
